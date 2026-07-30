@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Hayidar Taju — Digital Legacy Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
+    
+    <!-- html2pdf Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================================================================
+       CURSOR ELEMENTS
+    ================================================================ -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-trail"></div>
+
+    <!-- ================================================================
+       SCROLL PROGRESS BAR
+    ================================================================ -->
+    <div id="scroll-progress"></div>
+
+    <!-- ================================================================
+       NAVIGATION - PROFILE PICTURE HERE
+    ================================================================ -->
+    <nav id="navbar">
+        <div class="nav-left">
+           
+            <img src="IMG_9793~2.JPG" alt="Hayidar Taju" class="nav-profile-img" id="profile-img">
+            <a href="#home" class="nav-brand" id="easter-trigger">Hayidar Taju</a>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#social">Social</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+        <div class="nav-controls">
+            <button class="icon-btn" id="theme-btn" title="Toggle Theme"><i class="fas fa-moon"></i></button>
+            <button class="icon-btn hamburger" id="hamburger" title="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ================================================================
+       MOBILE MENU
+    ================================================================ -->
+    <div class="mobile-menu-overlay" id="mobileOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="close-btn" id="closeMenu"><i class="fas fa-times"></i></button>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#social">Social</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </div>
+
+    <!-- ================================================================
+       HERO SECTION
+    ================================================================ -->
+    <section class="hero" id="home">
+        <canvas id="particle-canvas"></canvas>
+        <div class="hero-content">
+            <h1>Hi, I am <span class="highlight">Hayidar Taju</span></h1>
+            <div class="typing-text"><span id="typed-target"></span></div>
+
+            <div class="stat-counters">
+                <div class="stat-card">
+                    <h3 class="counter" data-target="0.5">0</h3>
+                    <p>Years Experience</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="counter" data-target="2">0</h3>
+                    <p>Projects Built</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="counter" data-target="12">0</h3>
+                    <p>Certifications</p>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <a href="#timeline" class="btn-primary">Explore Journey</a>
+                <button class="btn-primary" style="background: transparent; border: 1px solid var(--cyan);" onclick="generatePDF()">Download Story PDF</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+       TIMELINE SECTION
+    ================================================================ -->
+    <section id="timeline">
+        <h2 class="section-title">Career Timeline</h2>
+        <div class="timeline" id="timeline-container"></div>
+        <div style="clear:both;"></div>
+    </section>
+
+    <!-- ================================================================
+       SKILLS SECTION
+    ================================================================ -->
+    <section id="skills">
+        <h2 class="section-title">Skills & Radar</h2>
+        <div class="skills-wrapper">
+            <div class="skills-grid" id="skills-container"></div>
+            <div>
+                <canvas id="radar-canvas" width="400" height="400"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+       PROJECTS SECTION - NEURAL MATRIX & QUANTUM DEX IMAGES HERE
+    ================================================================ -->
+    <section id="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="portfolio-grid">
+            <!-- Neural Matrix AI -->
+            <div class="glass-card project-card">
+                <div class="project-img">
+                    
+                    <img src="12.jpg" alt="Neural Matrix AI" style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
+                </div>
+                <h3>student-bridge</h3>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0.5rem 0 1rem;">build our school by technologyin technology</p>
+                <a href="#" class="btn-primary" style="padding: 0.4rem 1rem; font-size: 0.8rem;">View Project</a>
+            </div>
+
+            <!-- Quantum DEX -->
+            <div class="glass-card project-card">
+                <div class="project-img">
+                    <img src="13.jpg" alt="prompt x" style="width:100%; height:100%; object-fit:cover; border-radius:8px;">
+                </div>
+                <h3>prompt x</h3>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0.5rem 0 1rem;">prompt x let write good prompt.</p>
+                <a href="#" class="btn-primary" style="padding: 0.4rem 1rem; font-size: 0.8rem;">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+       SOCIAL MEDIA SECTION
+    ================================================================ -->
+    <section id="social">
+        <h2 class="section-title">Connect With Me</h2>
+        <div class="social-grid">
+            <a href="https://youtube.com/@hayidartaju-u4e7q?si=2VTceYPa_tC_ufj8" target="_blank" class="glass-card social-card youtube">
+                <i class="fab fa-youtube"></i>
+                <h3>YouTube</h3>
+                <p>Subscribe</p>
+            </a>
+            <a href="https://tiktok.com/@hayidartaju106" target="_blank" class="glass-card social-card tiktok">
+                <i class="fab fa-tiktok"></i>
+                <h3>TikTok</h3>
+                <p>Follow</p>
+            </a>
+            <a href="https://github.com/hayidartaju-maker" target="_blank" class="glass-card social-card github">
+                <i class="fab fa-github"></i>
+                <h3>GitHub</h3>
+                <p>View Projects</p>
+            </a>
+            <a href="https://facebook.com/Hayidar0011" target="_blank" class="glass-card social-card facebook">
+                <i class="fab fa-facebook"></i>
+                <h3>Facebook</h3>
+                <p>Connect</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- ================================================================
+       CONTACT SECTION
+    ================================================================ -->
+    <section id="contact">
+        <h2 class="section-title">Contact Me</h2>
+        <form class="glass-card contact-form" id="contact-form">
+            <div class="form-group">
+                <input type="text" id="contact-name" placeholder="Your Name" required>
+            </div>
+            <div class="form-group">
+                <input type="email" id="contact-email" placeholder="Your Email" required>
+            </div>
+            <div class="form-group">
+                <input type="text" id="contact-subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group">
+                <textarea id="contact-message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary" id="send-btn">
+                <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+        </form>
+    </section>
+
+    <!-- ================================================================
+       ABOUT SECTION
+    ================================================================ -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content glass-card">
+            <div class="about-text">
+                <p>I'm <strong>Hayidar Taju</strong>, a passionate Full-Stack Developer and AI Enthusiast. I love building innovative solutions that make a difference.</p>
+                <br>
+                <p>With a strong foundation in Python and growing expertise in modern web technologies, I'm on a mission to create impactful digital experiences.</p>
+                <br>
+                <div class="about-details">
+                    <div><i class="fas fa-map-marker-alt"></i> 📍 Jimma, Oromia, Ethiopia</div>
+                    <div><i class="fas fa-graduation-cap"></i> Web Development & AI</div>
+                    <div><i class="fas fa-brain"></i> Always improving</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================================================================
+       FOOTER
+    ================================================================ -->
+    <footer>
+        <p>© <span id="year"></span> Hayidermaker — Today a learner, tomorrow a solver</p>
+        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.3rem;">Built with <i class="fas fa-heart" style="color: var(--purple);"></i> for Web Competitions</p>
+    </footer>
+
+    <!-- ================================================================
+       READING BADGE
+    ================================================================ -->
+    <div id="reading-badge" class="glass-card">📖 Est. Read: <span id="read-time">2</span> min</div>
+
+    <!-- ================================================================
+       CHATBOT
+    ================================================================ -->
+    <button id="chat-fab" title="Chat with Chronos AI"><i class="fas fa-hourglass-half"></i></button>
+    <div id="chat-window" class="glass-card">
+        <div class="chat-header">
+            <span style="font-family: var(--font-heading); font-size: 0.9rem;"><i class="fas fa-robot"></i> Chronos AI</span>
+            <button id="chat-close" style="background:none; border:none; color:var(--text-main); cursor:pointer;"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chat-messages" id="chat-messages"></div>
+        <form class="chat-input" id="chat-form">
+            <input type="text" id="chat-input-field" placeholder="Ask Chronos anything..." required>
+            <button type="submit" style="background:none; border:none; color:var(--cyan); cursor:pointer;"><i class="fas fa-paper-plane"></i></button>
+        </form>
+    </div>
+
+    <!-- ================================================================
+       TOAST NOTIFICATION
+    ================================================================ -->
+    <div id="toast">Message transmitted successfully!</div>
+
+    <!-- ================================================================
+       EXTERNAL JAVASCRIPT
+    ================================================================ -->
+    <script src="script.js"></script>
+</body>
+</html>
