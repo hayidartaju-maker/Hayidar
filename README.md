@@ -11,8 +11,8 @@ I'm Hayidar Taju, a Full-Stack Developer and AI enthusiast from Jimma, Oromia, E
 - Node.js (20%)
 
 ## 📂 Projects
-1. **Neural Matrix AI** - Generative AI dashboard
-2. **Quantum DEX** - Web3 exchange interface
+1. **  personal portfolio** - Generative AI dashboard
+2. **Student bridge** - Web3 exchange interface
 
 ## 📱 Connect With Me
 - YouTube: @hayidartaju-u4e7q
@@ -20,5 +20,5 @@ I'm Hayidar Taju, a Full-Stack Developer and AI enthusiast from Jimma, Oromia, E
 - GitHub: hayidartaju-maker
 - Facebook: Hayidar0011
 
-## 🌐 Live Demo
+## 🌐 Live 
 https://hayidartaju-maker.github.io/Hayidar
